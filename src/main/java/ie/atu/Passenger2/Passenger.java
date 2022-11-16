@@ -1,5 +1,8 @@
 package ie.atu.Passenger2;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
 public class Passenger {
 
     private String title;
@@ -7,14 +10,6 @@ public class Passenger {
     private String id;
     private String phone;
     private int age;
-
-    public Passenger(String title, String name, String id, String phone, int age) {
-        this.title = title;
-        this.name = name;
-        this.id = id;
-        this.phone = phone;
-        this.age = age;
-    }
 
     public String getTitle() {
         return title;
