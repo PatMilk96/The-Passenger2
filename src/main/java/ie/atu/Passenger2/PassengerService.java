@@ -9,7 +9,7 @@ import java.util.List;
 @Service
 public class PassengerService {
 
-    public List<Passenger> getPassenger(){
+    public List<Passenger> getPassengers(){
         List<Passenger> myPassengers = List.of(
                 new Passenger("Mr", "Patryk1", "1234567821", "0859485767", 25),
                 new Passenger("Mr", "Patryk2", "9876543211", "0859475763", 34),
