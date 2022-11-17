@@ -16,12 +16,17 @@ public class Passenger2Application {
 
 	PassengerService myService;
 
-	public Passenger2Application(PassengerService MyService){
+	public Passenger2Application(PassengerService myService) {
 		this.myService = myService;
 	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(Passenger2Application.class, args);
+	}
+
+	@GetMapping
+	public List<Passenger> getPassenger(){
+		return myService.getPassengers();
 	}
 
 	@GetMapping("/{passengerID}")
