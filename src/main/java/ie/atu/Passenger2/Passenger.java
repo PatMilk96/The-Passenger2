@@ -21,7 +21,7 @@ public class Passenger {
     private int age;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long passId;
+    private Long count;
 
     public Passenger(String title, String name, String id, String phone, int age) {
         setTitle(title);
