@@ -14,7 +14,7 @@ import javax.persistence.*;
 @Entity
 @Table
 public class Passenger {
-    private static String title;
+    private String title;
     private String name;
     private String id;
     private String phone;
