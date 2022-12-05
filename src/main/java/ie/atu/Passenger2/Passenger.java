@@ -5,23 +5,30 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.persistence.*;
+
 @AllArgsConstructor
 @Getter
 @Setter
 @NoArgsConstructor
+@Entity
+@Table
 public class Passenger {
-    private static String title;
+    private String title;
     private String name;
     private String id;
     private String phone;
     private int age;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long count;
 
     public Passenger(String title, String name, String id, String phone, int age) {
-        this.title = title;
-        this.name = name;
-        this.id = id;
-        this.phone = phone;
-        this.age = age;
+        setTitle(title);
+        setName(name);
+        setId(id);
+        setPhone(phone);
+        setAge(age);
     }
 
     public String getTitle() {
