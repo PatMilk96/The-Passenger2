@@ -24,10 +24,9 @@ class PassengerTest {
     }
 
     @Test
-    void titleTestFail(){
-        Passenger newPass = new Passenger("King", "Patryk", "1234567890", "0853849583", 26);
-        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, newPass::getTitle);
-        assertEquals("Please Enter a valid title", exception.getMessage());
+    void testTitleFail(){
+        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {new Passenger("Mister", "John Doe", "1235473822", "1222222223", 19);});
+        assertEquals("This is not a valid name. Use Mr, Ms or Mrs.", exMessage.getMessage());
     }
 
     @Test

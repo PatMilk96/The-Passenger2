@@ -10,7 +10,6 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 @Table
-
 public class Passenger {
     private String title;
     private String name;
@@ -31,16 +30,16 @@ public class Passenger {
     }
 
     public String getTitle() {
-        if(title == "Mr" || title == "Mrs" || title == "Ms"){
-            return title;
-        }
-        else{
-            throw new IllegalArgumentException("Please Enter a valid title");
-        }
+        return title;
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        if("Mr".equalsIgnoreCase(title) || "Mrs".equalsIgnoreCase(title) || "Ms".equalsIgnoreCase(title)){
+            this.title = title;
+        }
+        else {
+            throw new IllegalArgumentException("This is not a valid name. Use Mr, Ms or Mrs.");
+        }
     }
 
     public String getName() {
