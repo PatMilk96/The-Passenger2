@@ -20,4 +20,8 @@ public class PassengerService {
         Passenger myPassenger = new Passenger("Mr", "Patryk5", "123784456789", "0859485767", 25);
         return myPassenger;
     }
+
+    public void savePassenger(Passenger passenger){
+        passengerRepo.save(passenger);
+    }
 }
