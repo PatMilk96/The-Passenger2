@@ -10,6 +10,7 @@ class PassengerTest {
 
     @BeforeEach
     void setUp() {
+        Passenger newPass = new Passenger("Mr", "Patryk", "1234334567890", "0853849583", 26);
     }
 
     @Test
