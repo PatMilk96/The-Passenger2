@@ -10,7 +10,6 @@ import java.util.List;
 @AllArgsConstructor
 @Service
 public class PassengerService {
-
     private final PassengerRepo passengerRepo;
     public List<Passenger> getPassengers(){
         return passengerRepo.findAll();
