@@ -1,6 +1,6 @@
 package ie.atu.Passenger2;
 
-import org.springframework.boot.SpringApplication;
+public class PassengerController {
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -33,4 +33,3 @@ public class PassengerController {
         return myService.getPassenger(passengerID);
     }
 }
-
