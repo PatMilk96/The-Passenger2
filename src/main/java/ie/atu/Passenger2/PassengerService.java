@@ -11,9 +11,7 @@ import java.util.List;
 @Service
 public class PassengerService {
     private final PassengerRepo passengerRepo;
-
     public List<Passenger> getPassengers(){
-
         return passengerRepo.findAll();
     }
 
@@ -21,5 +19,9 @@ public class PassengerService {
     public Passenger getPassenger(String passengerID){
         Passenger myPassenger = new Passenger("Mr", "Patryk5", "123784456789", "0859485767", 25);
         return myPassenger;
+    }
+
+    public void savePassenger(Passenger passenger){
+        passengerRepo.save(passenger);
     }
 }

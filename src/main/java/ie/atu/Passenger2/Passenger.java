@@ -1,9 +1,6 @@
 package ie.atu.Passenger2;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -19,9 +16,10 @@ public class Passenger {
     private String id;
     private String phone;
     private int age;
-    @Id
+
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long count;
+    @Id
+    private long count;
 
     public Passenger(String title, String name, String id, String phone, int age) {
         setTitle(title);
@@ -32,16 +30,16 @@ public class Passenger {
     }
 
     public String getTitle() {
-        if(title == "Mr" || title == "Mrs" || title == "Ms"){
-            return title;
-        }
-        else{
-            throw new IllegalArgumentException("Please Enter a valid title");
-        }
+        return title;
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        if("Mr".equalsIgnoreCase(title) || "Mrs".equalsIgnoreCase(title) || "Ms".equalsIgnoreCase(title)){
+            this.title = title;
+        }
+        else {
+            throw new IllegalArgumentException("This is not a valid name. Use Mr, Ms or Mrs.");
+        }
     }
 
     public String getName() {
